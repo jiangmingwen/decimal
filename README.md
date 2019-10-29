@@ -1,6 +1,6 @@
 # decimal  
 
-数字的加减乘除，处理了精度损失的问题。
+num add, subtract, multiply and divide, No loss of accuracy
 
 ### usage
 
@@ -30,10 +30,10 @@ import * as Decimal from '@jay/decimal';
 
 #### API
 
-| 方法（method）     | 参数（parameters） | 结果(result) | 备注(remark)                           |
+|       method       |     parameters     |    result    | remark                           |
 | ------------------ | ------------------ | ------------ | -------------------------------------- |
-| add ( arguments )  | num1,num2...       | number       | 所有参数相加                           |
-| sub( arguments )   | num1,num2...       | number       | 第一个参数作为被减数，其余参数作为减数 |
-| multi( arguments ) | num1,num2...       | number       | 所有参数相乘                           |
+| add ( arguments )  | num1,num2...       | number       | all param add                           |
+| sub( arguments )   | num1,num2...       | number       | first param as minuend，reset param as minuer |
+| multi( arguments ) | num1,num2...       | number       | all param multiply                           |
 | div(num1,num2)     | num1,num2          | number       | num1 / num2                            |
 
