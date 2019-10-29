@@ -13,6 +13,7 @@ function add() {
     }
     return result / (Math.pow(10, b));
 }
+exports.add = add;
 function sub() {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -32,6 +33,7 @@ function sub() {
     }
     return result / (Math.pow(10, b));
 }
+exports.sub = sub;
 function multi() {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -45,6 +47,7 @@ function multi() {
     }
     return result / (Math.pow(10, (b * args.length)));
 }
+exports.multi = multi;
 function div(num1, num2) {
     if (!num2 || typeof num2 !== 'number')
         throw new Error("The denominator should be a number and cannot be zero");
@@ -54,6 +57,7 @@ function div(num1, num2) {
     b = (Number(num1Arr[1]) || 0) > (Number(num2Arr[1]) || 0) ? (Number(num1Arr[1]) || 0) : (Number(num2Arr[1]) || 0);
     return (num1 * (Math.pow(10, b))) / (num2 * (Math.pow(10, b)));
 }
+exports.div = div;
 function getPow() {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -73,10 +77,3 @@ function getPow() {
     }
     return b;
 }
-var Decimal = {
-    add: add,
-    sub: sub,
-    multi: multi,
-    div: div
-};
-exports["default"] = Decimal;

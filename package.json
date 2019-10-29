@@ -1,9 +1,9 @@
 {
   "name": "@jaymw/decimal",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "for simple number to operation with + - * /",
   "main": "index.js",
-  "types": "./index.d.ts",
+  "types": "typings",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

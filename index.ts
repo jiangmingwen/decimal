@@ -1,5 +1,5 @@
 
-function add(...args:number[]): number {
+export function add(...args:number[]): number {
     var b = getPow(...args);
     var result = 0;
     for (var num of args) {
@@ -8,7 +8,7 @@ function add(...args:number[]): number {
     return result / (10 ** b);
 }
 
-function sub(...args:number[]): number {
+export function sub(...args:number[]): number {
     var b = getPow(...args);
     var result = 0;
     var i = 0;
@@ -21,7 +21,7 @@ function sub(...args:number[]): number {
     return result / (10 ** b);
 }
 
-function multi(...args:number[]): number {
+export function multi(...args:number[]): number {
     var b = getPow(...args);
     var result = 1;
     for (var num of args) {
@@ -30,7 +30,7 @@ function multi(...args:number[]): number {
     return result / (10 ** (b * args.length));
 }
 
-function div(num1: number, num2: number): number {
+export function div(num1: number, num2: number): number {
     if (!num2 || typeof num2 !== 'number') throw new Error("The denominator should be a number and cannot be zero");
     var b = 0;
     var num1Arr = (Number(num1) || 0).toString().split('.');
@@ -39,7 +39,7 @@ function div(num1: number, num2: number): number {
     return (num1 * (10 ** b)) / (num2 * (10 ** b));
 }
 
-function getPow(...args:number[]): number {
+  function getPow(...args:number[]): number {
     var b = 0;
     for (var num of args) {
         if (num === undefined || num === null) {
@@ -54,11 +54,3 @@ function getPow(...args:number[]): number {
     return b;
 }
 
-const Decimal = {
-    add,
-    sub,
-    multi,
-    div
-}
-
-export default Decimal;
