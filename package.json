@@ -3,9 +3,15 @@
   "version": "1.0.0",
   "description": "for simple number to operation with + - * /",
   "main": "index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "README.md"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jiangmingwen/decimal.git"
